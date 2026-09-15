@@ -48,7 +48,7 @@ export const BackendEvolution: React.FC<BackendEvolutionProps> = ({ lang }) => {
         </div>
 
         {/* Stage Selector Timeline */}
-        <div className="flex items-center justify-center gap-0 mb-10">
+        <div className="flex items-center justify-start sm:justify-center gap-0 mb-10 overflow-x-auto pb-3 max-w-full px-2">
           {BACKEND_STAGES.map((s, idx) => (
             <React.Fragment key={idx}>
               <button

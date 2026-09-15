@@ -59,28 +59,28 @@ export const GamingSection: React.FC<GamingSectionProps> = ({ lang }) => {
         </div>
 
         {/* Tab switcher */}
-        <div className="flex justify-center mb-10">
-          <div className="p-1 rounded-2xl bg-[#12141f] border border-white/10 flex items-center gap-1">
+        <div className="flex justify-center mb-10 max-w-xl mx-auto px-2">
+          <div className="p-1 rounded-2xl bg-[#12141f] border border-white/10 flex flex-col sm:flex-row items-center gap-1 w-full sm:w-auto">
             <button
               onClick={() => handleTabChange('cs2')}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+              className={`w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === 'cs2'
                   ? 'bg-gradient-to-r from-orange-500 to-amber-600 text-white shadow-lg shadow-orange-500/25'
                   : 'text-gray-400 hover:text-white'
               }`}
             >
-              <Target className="w-4 h-4" />
+              <Target className="w-4 h-4 shrink-0" />
               <span>Counter-Strike 2 (m0NESY)</span>
             </button>
             <button
               onClick={() => handleTabChange('chess')}
-              className={`flex items-center gap-2 px-6 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+              className={`w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                 activeTab === 'chess'
                   ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg shadow-indigo-500/25'
                   : 'text-gray-400 hover:text-white'
               }`}
             >
-              <Shield className="w-4 h-4" />
+              <Shield className="w-4 h-4 shrink-0" />
               <span>Chess.com (London System)</span>
             </button>
           </div>

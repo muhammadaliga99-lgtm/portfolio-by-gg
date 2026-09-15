@@ -68,10 +68,11 @@ export const QuickStats: React.FC<QuickStatsProps> = ({ lang }) => {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4">
         {stats.map((item, idx) => {
           const Icon = item.icon;
+          const isLast = idx === stats.length - 1;
           return (
             <div
               key={idx}
-              className={`p-4 sm:p-5 rounded-2xl bg-[#0d0f17]/80 backdrop-blur-xl border ${item.borderColor} bg-gradient-to-b ${item.color} shadow-xl hover:-translate-y-1 transition-all duration-300 group`}
+              className={`p-4 sm:p-5 rounded-2xl bg-[#0d0f17]/80 backdrop-blur-xl border ${item.borderColor} bg-gradient-to-b ${item.color} shadow-xl hover:-translate-y-1 transition-all duration-300 group ${isLast ? 'col-span-2 md:col-span-1' : ''}`}
             >
               <div className="flex items-center justify-between mb-3">
                 <div className={`p-2 rounded-xl bg-white/5 border border-white/10 ${item.iconColor} group-hover:scale-110 transition-transform`}>

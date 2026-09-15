@@ -23,23 +23,24 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose, lang }) => {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-in fade-in duration-200 overflow-y-auto">
       <div className="relative w-full max-w-4xl bg-[#0f121d] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col my-auto max-h-[92vh]">
         {/* Top bar controls */}
-        <div className="bg-[#151928] border-b border-white/10 px-6 py-3.5 flex items-center justify-between shrink-0">
-          <div className="flex items-center gap-2">
-            <span className="text-white font-semibold text-sm">
+        <div className="bg-[#151928] border-b border-white/10 px-4 sm:px-6 py-2.5 sm:py-3.5 flex items-center justify-between shrink-0 gap-2">
+          <div className="flex items-center gap-2 truncate">
+            <span className="text-white font-semibold text-xs sm:text-sm truncate">
               {lang === 'uz' ? 'Rezyume / CV Ko\'rinishi' : 'Professional Resume / CV'}
             </span>
-            <span className="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
+            <span className="hidden xs:inline-block text-[11px] font-mono text-cyan-400 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
               PDF Ready
             </span>
           </div>
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             <button
               onClick={handlePrint}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-white text-xs font-medium transition-colors cursor-pointer shadow-md shadow-cyan-500/20"
+              className="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-white text-xs font-medium transition-colors cursor-pointer shadow-md shadow-cyan-500/20"
             >
-              <Printer className="w-3.5 h-3.5" />
-              <span>{lang === 'uz' ? 'Chop etish / PDF Saqlash' : 'Print / Save as PDF'}</span>
+              <Printer className="w-3.5 h-3.5 shrink-0" />
+              <span className="hidden sm:inline">{lang === 'uz' ? 'Chop etish / PDF Saqlash' : 'Print / Save as PDF'}</span>
+              <span className="sm:hidden">{lang === 'uz' ? 'PDF' : 'Print'}</span>
             </button>
             <button
               onClick={onClose}
@@ -51,7 +52,7 @@ export const CvModal: React.FC<CvModalProps> = ({ isOpen, onClose, lang }) => {
         </div>
 
         {/* Scrollable CV Body */}
-        <div className="p-6 sm:p-10 overflow-y-auto font-sans text-gray-200 space-y-8 print:p-0 print:bg-white print:text-black">
+        <div className="p-4 sm:p-8 md:p-10 overflow-y-auto font-sans text-gray-200 space-y-6 sm:space-y-8 print:p-0 print:bg-white print:text-black">
           {/* Header */}
           <div className="border-b border-white/10 pb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div>

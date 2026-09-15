@@ -180,8 +180,8 @@ export const EducationSection: React.FC<EducationSectionProps> = ({ lang }) => {
               </span>
             </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs font-mono">
+            <div className="overflow-x-auto pb-2">
+              <table className="w-full text-left text-xs font-mono min-w-[500px]">
                 <thead>
                   <tr className="border-b border-white/10 text-gray-400">
                     <th className="py-3 px-4">{lang === 'uz' ? 'Hafta Kuni' : 'Day of Week'}</th>

@@ -234,48 +234,48 @@ export const Hero3D: React.FC<Hero3DProps> = ({
             <span>{t.hero.greeting}</span>
           </p>
 
-          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-tight">
+          <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight break-words">
             Gafurov <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-indigo-300 to-fuchsia-400">Muhammad Ali</span>
           </h1>
 
-          <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-200 tracking-tight">
+          <p className="text-lg sm:text-2xl md:text-3xl font-semibold text-gray-200 tracking-tight">
             {t.hero.role}
           </p>
         </div>
 
         {/* Dynamic Subtitle & Architecture Summary */}
-        <p className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed mb-8">
+        <p className="max-w-3xl mx-auto text-xs sm:text-base md:text-lg text-gray-300 leading-relaxed mb-8 px-2">
           {t.hero.subtitle}
         </p>
 
         {/* Developer Info Chips */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-mono text-gray-300 mb-10">
           <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10">
-            <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+            <Calendar className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
             <span>13 yosh (15.01.2013)</span>
           </span>
           <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10">
-            <MapPin className="w-3.5 h-3.5 text-fuchsia-400" />
+            <MapPin className="w-3.5 h-3.5 text-fuchsia-400 shrink-0" />
             <span>Toshkent, Mirzo Ulug'bek</span>
           </span>
           <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10">
-            <Layers className="w-3.5 h-3.5 text-amber-400" />
+            <Layers className="w-3.5 h-3.5 text-amber-400 shrink-0" />
             <span>IELTS 7.5+ Nomzod</span>
           </span>
           <span className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white/5 border border-white/10">
-            <Gamepad2 className="w-3.5 h-3.5 text-emerald-400" />
+            <Gamepad2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
             <span>Steam: m0NESY · London System</span>
           </span>
         </div>
 
         {/* Action Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+        <div className="grid grid-cols-1 sm:flex sm:flex-wrap items-center justify-center gap-3 sm:gap-4 max-w-2xl mx-auto">
           <button
             onClick={() => {
               sounds.playClick();
               onExploreProjects();
             }}
-            className="flex items-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-semibold text-sm shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all cursor-pointer"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white font-semibold text-sm shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:-translate-y-0.5 transition-all cursor-pointer"
           >
             <span>{t.hero.exploreBtn}</span>
             <ArrowRight className="w-4 h-4" />
@@ -286,7 +286,7 @@ export const Hero3D: React.FC<Hero3DProps> = ({
               sounds.playClick();
               onViewTrophy();
             }}
-            className="flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 font-semibold text-sm hover:-translate-y-0.5 transition-all cursor-pointer"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 font-semibold text-sm hover:-translate-y-0.5 transition-all cursor-pointer"
           >
             <Award className="w-4 h-4 text-amber-400" />
             <span>{t.hero.trophyBtn} (92.1)</span>
@@ -297,7 +297,7 @@ export const Hero3D: React.FC<Hero3DProps> = ({
               sounds.playClick();
               onOpenTerminal();
             }}
-            className="flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 font-mono text-sm hover:-translate-y-0.5 transition-all cursor-pointer"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 font-mono text-sm hover:-translate-y-0.5 transition-all cursor-pointer"
           >
             <Terminal className="w-4 h-4" />
             <span>{t.hero.terminalBtn}</span>
@@ -308,7 +308,7 @@ export const Hero3D: React.FC<Hero3DProps> = ({
               sounds.playClick();
               onContact();
             }}
-            className="flex items-center gap-2 px-5 py-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-200 font-medium text-sm hover:-translate-y-0.5 transition-all cursor-pointer"
+            className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 py-3.5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 text-gray-200 font-medium text-sm hover:-translate-y-0.5 transition-all cursor-pointer"
           >
             <MessageSquare className="w-4 h-4 text-cyan-400" />
             <span>{t.hero.contactBtn}</span>

@@ -49,39 +49,39 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
         </div>
 
         {/* Tab Controls */}
-        <div className="flex items-center justify-center gap-2 p-1.5 rounded-2xl bg-[#12141f]/90 border border-white/10 max-w-md mx-auto mb-10 shadow-lg">
+        <div className="grid grid-cols-3 sm:flex items-center justify-center gap-1.5 sm:gap-2 p-1.5 rounded-2xl bg-[#12141f]/90 border border-white/10 max-w-md mx-auto mb-10 shadow-lg">
           <button
             onClick={() => handleTabChange('bio')}
-            className={`flex-1 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+            className={`flex-1 py-2 px-1.5 sm:py-2.5 sm:px-3 rounded-xl text-[11px] sm:text-sm font-semibold transition-all cursor-pointer flex items-center justify-center gap-1 sm:gap-1.5 ${
               activeTab === 'bio'
                 ? 'bg-cyan-500 text-white shadow-md shadow-cyan-500/30'
                 : 'text-gray-400 hover:text-white'
             }`}
           >
-            <User className="w-4 h-4" />
-            <span>{t.about.tabs.bio}</span>
+            <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            <span className="truncate">{t.about.tabs.bio}</span>
           </button>
           <button
             onClick={() => handleTabChange('schedule')}
-            className={`flex-1 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+            className={`flex-1 py-2 px-1.5 sm:py-2.5 sm:px-3 rounded-xl text-[11px] sm:text-sm font-semibold transition-all cursor-pointer flex items-center justify-center gap-1 sm:gap-1.5 ${
               activeTab === 'schedule'
                 ? 'bg-cyan-500 text-white shadow-md shadow-cyan-500/30'
                 : 'text-gray-400 hover:text-white'
             }`}
           >
-            <Calendar className="w-4 h-4" />
-            <span>{t.about.tabs.schedule}</span>
+            <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            <span className="truncate">{t.about.tabs.schedule}</span>
           </button>
           <button
             onClick={() => handleTabChange('philosophy')}
-            className={`flex-1 py-2.5 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+            className={`flex-1 py-2 px-1.5 sm:py-2.5 sm:px-3 rounded-xl text-[11px] sm:text-sm font-semibold transition-all cursor-pointer flex items-center justify-center gap-1 sm:gap-1.5 ${
               activeTab === 'philosophy'
                 ? 'bg-cyan-500 text-white shadow-md shadow-cyan-500/30'
                 : 'text-gray-400 hover:text-white'
             }`}
           >
-            <Palette className="w-4 h-4" />
-            <span>{t.about.tabs.philosophy}</span>
+            <Palette className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />
+            <span className="truncate">{t.about.tabs.philosophy}</span>
           </button>
         </div>
 
@@ -248,8 +248,8 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ lang }) => {
               </div>
             </div>
 
-            <div className="overflow-x-auto">
-              <table className="w-full text-left text-xs font-sans">
+            <div className="overflow-x-auto pb-2">
+              <table className="w-full text-left text-xs font-sans min-w-[540px]">
                 <thead>
                   <tr className="border-b border-white/10 text-gray-400 uppercase font-mono text-[11px]">
                     <th className="py-3 px-4">Hafta Kuni</th>

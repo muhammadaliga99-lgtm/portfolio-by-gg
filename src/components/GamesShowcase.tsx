@@ -62,28 +62,28 @@ export const GamesShowcase: React.FC<GamesShowcaseProps> = ({ lang }) => {
         </div>
 
         {/* Game Switcher Tabs */}
-        <div className="flex items-center justify-center gap-3 mb-10">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-10 max-w-xl mx-auto">
           <button
             onClick={() => handleTabChange('cs2')}
-            className={`flex items-center gap-2.5 px-6 py-3 rounded-2xl text-sm font-bold transition-all cursor-pointer ${
+            className={`w-full sm:w-auto flex items-center justify-center gap-2.5 px-6 py-3 rounded-2xl text-sm font-bold transition-all cursor-pointer ${
               activeTab === 'cs2'
-                ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-black shadow-xl shadow-amber-500/20 scale-105'
+                ? 'bg-gradient-to-r from-amber-500 to-amber-600 text-black shadow-xl shadow-amber-500/20 scale-100 sm:scale-105'
                 : 'bg-white/5 border border-white/10 text-gray-300 hover:text-white'
             }`}
           >
-            <Crosshair className="w-4 h-4" />
+            <Crosshair className="w-4 h-4 shrink-0" />
             <span>Counter-Strike 2 (3D Mirage)</span>
           </button>
 
           <button
             onClick={() => handleTabChange('minecraft')}
-            className={`flex items-center gap-2.5 px-6 py-3 rounded-2xl text-sm font-bold transition-all cursor-pointer ${
+            className={`w-full sm:w-auto flex items-center justify-center gap-2.5 px-6 py-3 rounded-2xl text-sm font-bold transition-all cursor-pointer ${
               activeTab === 'minecraft'
-                ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-black shadow-xl shadow-emerald-500/20 scale-105'
+                ? 'bg-gradient-to-r from-emerald-500 to-emerald-600 text-black shadow-xl shadow-emerald-500/20 scale-100 sm:scale-105'
                 : 'bg-white/5 border border-white/10 text-gray-300 hover:text-white'
             }`}
           >
-            <Box className="w-4 h-4" />
+            <Box className="w-4 h-4 shrink-0" />
             <span>Minecraft 3D (Voxel Engine)</span>
           </button>
         </div>
